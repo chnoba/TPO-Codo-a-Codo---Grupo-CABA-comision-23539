@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9009a12189.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a href="index.html"
+        ><img class="logo" src="img/rocco-logo.svg" height="80px" width="80px" alt="rocco-logo"
+      /></a>
+      <input type="checkbox" id="menu-check" />
+        <label id="menu" for="menu-check">
+          <span id="menu-abrir"><i class="fa-solid fa-bars"></i></span>
+          <span id="menu-cerrar"><i class="fa-solid fa-x"></i></span>
+        </label>
+    <nav>
+    <ul class="menu-lista">
+      <li class="menu-item"><a class="no-actual" href="productos.html">PRODUCTOS</a></li>
+      <li class="menu-item"><a class="no-actual" href="contacto.html">CONTACTO</a></li>
+      <li class="menu-item">
+        <a id="actual" href="sobrenosotros.html">SOBRE NOSOTROS</a>
+      </li>
+      <li class="menu-item">
+        <button onclick="parent.location='index.html'" class="boton-home">
+          <img style="height: 30px" src="img/home.svg" alt="home" />
+        </button>
+      </li>
+    </ul>
+  </nav>
+      </div>
+</header>
+
+<main>
+  <!--<img src="Fondo.PNG" alt="Fondo" width="1500px">
+  <p>Rocco Clothes es una marca de ropa urbana con estilo. Sus prendas están inspiradas en la cultura urbana y el streetwear, y están diseñadas para personas que buscan un look moderno y original.
+
+      La marca ofrece una amplia gama de prendas, desde camisetas y sudaderas hasta pantalones y chaquetas. Todos sus diseños están elaborados con materiales de alta calidad y están disponibles en una variedad de colores y estampados.
+      
+      Rocco Clothes es una marca ideal para personas que buscan una ropa urbana con estilo. Sus prendas son perfectas para cualquier ocasión, desde un día en la ciudad hasta una salida nocturna.</p>
+  -->
+
+      <section class="sobrenosotros">
+        <div class="grilla">
+          <div class="texto-nosotros"><H2 class="texto-nosotros"><b>Rocco Clothes: </b>Ropa urbana para todos</H2>
+          </div>
+          <div class="fondo-sobrenosotros"><img src="img/fondo.jpg" alt="Fondo" ></div>
+        </div>
+        <p style="line-height: 1.5; font-size: 1.2em;"><b>Rocco Clothes</b> es una empresa Argentina con más de 30 años de experiencia en el mercado textil y de confecciones.  
+          Trabajamos para satisfacer los estándares de calidad de todos nuestros. 
+          Somos specialistas en el diseño, desarrollo, confección y distribución de prendas de vestir.
+           Contamos con un equipo humano especializado, innovador y comprometido y estamos encaminados a consolidarnos como una empresa competitiva y vanguardista.</p>
+      </section>
+      <h1 id="equipo" style="margin-left: 1.5em; line-height:1em;">Nuestro Equipo:</h1>
+      <section class="personas">
+        
+          <!-- Contenido de personas aquí -->
+          <div class="grilla">
+          <div class="persona">
+              <img src="img/fede.jpg" alt="Persona 1">
+              <div class="descripcion">
+                  <h2>Federico Quarchioni</h2>
+                  <h3>Gerente financiero</h3>
+                  <div class="sabermas">
+                    <a class="boton-saber-mas" href="#popup-fede">Saber más</a>
+                  </div>
+                  
+              </div>
+          </div>
+      
+          <div class="persona">
+              <img src="img/nelson.JPG" alt="Persona 2" >
+              <div class="descripcion">
+                  <h2>Nelson Salto</h2>
+                  <h3>Gerente comercial</h3>
+                  <div class="sabermas">
+                    <a class="boton-saber-mas" href="#popup-nelson">Saber más</a>
+                  </div>
+              </div>
+          </div>
+          <div class="persona">
+              <img src="img/cris.JPG" alt="Persona 3">
+              <div class="descripcion">
+                  <h2>Cristian Latro</h2>
+                  <h3>Gerente de operaciones</h3>
+                  <div class="sabermas">
+                    <a class="boton-saber-mas" href="#popup-cris">Saber más</a>
+                  </div>
+              </div>
+          </div>
+          <div class="persona">
+              <img src="img/Javier.jpg" alt="Persona 4">
+              <div class="descripcion">
+                  <h2>Javier Soliz</h2>
+                  <h3>Gerente de compras</h3>
+                  <div class="sabermas">
+                    <a class="boton-saber-mas" href="#popup-javier">Saber más</a>
+                  </div>
+              </div>
+          </div>
+        </div>
+  
+      </section>
+
+      
+<div id="popup-fede" class="overlay">
+	<div class="popup">
+		<h2>Federico Quarchioni</h2>
+		<a class="cerrar" href="#equipo">&times;</a>
+		<div class="content">
+			<p>Federico Quarchioni es un gerente financiero con más de 10 años de experiencia en empresas de diferentes industrias. Es un experto en análisis financiero, planificación estratégica y gestión de riesgos. En su actual cargo como gerente financiero de Rocco Clothes, es responsable de liderar el equipo financiero en la toma de decisiones que permitan a la empresa alcanzar sus objetivos.</p>
+		</div>
+	</div>
+</div>
+
+<div id="popup-nelson" class="overlay">
+	<div class="popup">
+		<h2>Nelson Salto</h2>
+		<a class="cerrar" href="#equipo">&times;</a>
+		<div class="content">
+			<p>Nelson Salto es un gerente comercial con más de 12 años de experiencia. Es excelente en desarrollo de estrategias de ventas, gestión de equipos de ventas y negociación. En su actual cargo como gerente comercial de Rocco Clothes, es responsable de liderar el equipo de ventas en el desarrollo y ejecución de estrategias que permitan a la empresa alcanzar sus objetivos de ventas.</p>
+		</div>
+	</div>
+</div>
+
+<div id="popup-cris" class="overlay">
+	<div class="popup">
+		<h2>Cristian Latro</h2>
+		<a class="cerrar" href="#equipo">&times;</a>
+		<div class="content">
+      <p>Cristian Latronico es un gerente de operaciones con más de 14 años de experiencia en diferentes industrias. Es muy eficaz en gestión de procesos, gestión de la cadena de suministro y gestión de calidad. En su actual cargo como gerente de operaciones de [nombre de la empresa], es responsable de liderar el equipo de operaciones en la mejora de los procesos y recursos de la empresa para garantizar la eficiencia y la calidad de los productos y servicios.</p>
+		</div>
+	</div>
+</div>
+
+<div id="popup-javier" class="overlay">
+	<div class="popup">
+		<h2>Javier Soliz</h2>
+		<a class="cerrar" href="#equipo">&times;</a>
+		<div class="content">
+			<p>Javier Soliz es un gerente de compras con más de 11 años de experiencia. Es un experto en negociación, gestión de proveedores y gestión de riesgos. En su actual cargo como gerente de compras de Rocco Clothes, es responsable de liderar el equipo de compras en la adquisición de bienes y servicios de alta calidad a precios competitivos.</p>
+		</div>
+	</div>
+</div>
+
+</main>
+
+<footer>
+  <ul class="footer-lista-links-internos">
+    <li class="link-interno"><a href="index.html">HOME</a></li>
+    <li class="link-interno"><a href="contacto.html">CONTACTO</a></li>
+    <li class="link-interno">
+      <a href="sobrenosotros.html">SOBRE NOSOTROS</a>
+    </li>
+  </ul>
+  <ul class="links-externos">
+    <li><i class="fa-brands fa-instagram"></i></li>
+    <li><i class="fa-brands fa-twitter"></i></li>
+  </ul>
+  <p>&copy; 2023 Rocco Clothing. Derechos reservados.</p>
+</footer>
+</body>
+</html>

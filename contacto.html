@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9009a12189.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a href="index.html"
+        ><img class="logo" src="img/rocco-logo.svg" height="80px" width="80px" alt="rocco-logo"
+      /></a>
+      <input type="checkbox" id="menu-check" />
+        <label id="menu" for="menu-check">
+          <span id="menu-abrir"><i class="fa-solid fa-bars"></i></span>
+          <span id="menu-cerrar"><i class="fa-solid fa-x"></i></span>
+        </label>
+    <nav>
+    <ul class="menu-lista">
+      <li class="menu-item"><a class="no-actual" href="productos.html">PRODUCTOS</a></li>
+      <li class="menu-item"><a id="actual" href="contacto.html">CONTACTO</a></li>
+      <li class="menu-item">
+        <a class="no-actual" href="sobrenosotros.html">SOBRE NOSOTROS</a>
+      </li>
+      <li class="menu-item">
+        <button onclick="parent.location='index.html'" class="boton-home">
+          <img style="height: 30px" src="img/home.svg" alt="home" />
+        </button>
+      </li>
+    </ul>
+  </nav>
+      </div>
+</header>
+
+
+<main>
+  <section>
+  <h2 class="titulo">Contacto</h2>
+
+
+
+          <h3 class="subtitulo">Direccion</h3>
+          <p>Estamos ubicados en <a class="link-exterior" href="https://maps.app.goo.gl/2JFKZDpfPwsWCgh28" target="_blank">Riobamba 40, C1025ABB CABA, Argentina <i class="fas fa-external-link-alt"></i> </a></p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205.23846445538823!2d-58.39352897504852!3d-34.60882839724064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac28e8e58e9%3A0x86fd87c73109d32!2sRiobamba%2040%2C%20C1025ABB%20CABA!5e0!3m2!1ses-419!2sar!4v1695693586978!5m2!1ses-419!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+  
+  <section class="formulario">
+      
+      <p>Si necesitas una respuesta inmediata. Envíanos tu duda o sugerencia a continuación:</p>
+      <div class="grilla">
+        <div class="form-imagen">
+          <div class="info-contenedor">
+            <div class="info">
+          <div class="icono-contacto"><i class="fa-solid fa-location-dot"></i></div><div class="texto-contacto"><p><b>Dirección:</b> Riobamba 40, C1025ABB CABA, Argentina</p></div></div>
+        </div>
+
+          <div class="info-contenedor">
+            <div class="info">
+          <div class="icono-contacto"><i class="fa-solid fa-phone"></i></div><div class="texto-contacto"><p><b>Telefono:</b> +54 9 11 xxxxxxx</p></div></div>
+        </div>
+
+          <div class="info-contenedor">
+            <div class="info">
+          <div class="icono-contacto"><i class="fa-solid fa-envelope"></i></div><div class="texto-contacto"><p><b>Email:</b> contactorocco@gmail.com</p></div></div>
+        </div>
+
+            
+        </div>
+
+      <form action="">
+          <fieldset>
+              <legend>Datos Personales</legend>
+                  
+                      <label for="nombre"></label>
+                      <input  type="text" placeholder="Nombre" id="nombre" name="nombre" size="50">    
+  
+                      <label for="apellido"></label>
+                      <input type="text" name="apellido" id="apellido" placeholder="Apellido" size="50">
+                  
+  
+                  
+                      <label for="email"></label>
+                      <input type="text" name="email" id="email" placeholder="Email" size="50">
+  
+                      <label for="telefono"></label>
+                      <input type="text" name="telefono" id="telefono" placeholder="Teléfono" size="50">
+                  
+                  
+                     <label for="pais"></label>
+                     <select onclick="cambiarBlanco()" class="selector" name="listaPaises" id="listaPaises">
+                      <option selected="true" disabled="disabled">País</option>
+                     </select>
+  
+                      <label for="ciudad"></label>
+                      <input type="text" placeholder="Ciudad" name="ciudad" id="ciudad" size="50">
+
+                      <label for="direccion"></label>
+                      <input type="text" placeholder="Dirección" name="direccion" id="direccion" size="50">
+                
+
+                  <textarea placeholder="Mensaje" name="mensaje" id="mensaje" cols="100" rows="10">
+                  </textarea>
+              
+
+          </fieldset>
+
+          <input id="boton-enviar" type="submit" value="Enviar">
+      </form>
+    </div>
+  </section>
+
+
+</main>
+
+
+<footer>
+  <ul class="footer-lista-links-internos">
+    <li class="link-interno"><a href="index.html">HOME</a></li>
+    <li class="link-interno"><a href="contacto.html">CONTACTO</a></li>
+    <li class="link-interno">
+      <a href="sobrenosotros.html">SOBRE NOSOTROS</a>
+    </li>
+  </ul>
+  <ul class="links-externos">
+    <li><i class="fa-brands fa-instagram"></i></li>
+    <li><i class="fa-brands fa-twitter"></i></li>
+  </ul>
+  <p>&copy; 2023 Rocco Clothing. Derechos reservados.</p>
+</footer>
+
+<script src="js/rest-api.js"></script>
+
+<script>function cambiarBlanco(){
+  document.getElementById("listaPaises").style.color= "white";
+}
+  </script>
+
+</body>
+</html>

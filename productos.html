@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9009a12189.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Productos</title>
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a href="index.html"
+        ><img class="logo" src="img/rocco-logo.svg" height="80px" width="80px" alt="rocco-logo"
+      /></a>
+      <input type="checkbox" id="menu-check" />
+        <label id="menu" for="menu-check">
+          <span id="menu-abrir"><i class="fa-solid fa-bars"></i></span>
+          <span id="menu-cerrar"><i class="fa-solid fa-x"></i></span>
+        </label>
+    <nav>
+    <ul class="menu-lista">
+      <li class="menu-item"><a id="actual" href="productos.html">PRODUCTOS</a></li>
+      <li class="menu-item"><a class="no-actual" href="contacto.html">CONTACTO</a></li>
+      <li class="menu-item">
+        <a class="no-actual" href="sobrenosotros.html">SOBRE NOSOTROS</a>
+      </li>
+      <li class="menu-item">
+        <button onclick="parent.location='index.html'" class="boton-home">
+          <img style="height: 30px" src="img/home.svg" alt="home" />
+        </button>
+      </li>
+    </ul>
+  </nav>
+      </div>
+</header>
+
+<main>
+  <article>
+  <h2 class="titulo">Productos</h2>
+  </article>
+  <section class="grilla">
+      <div class="tarjeta-producto">
+          <img class="producto" src="/img/sueter.jpg" alt="camisa negra">
+          <h2>Camisa Negra</h2>
+          <h3>$15.000</h3>
+          <p>Una camiseta negra de alta calidad.</p>
+      </div>
+      <div class="tarjeta-producto">
+          <img class="producto" src="/img/pantalonazul.jpg" alt="pantalon azul">
+          <h2>Pantalón Azul</h2>
+          <h3>$16.000</h3>
+          <p>Un pantalón azul de estilo urbano.</p>
+      </div>
+      <div class="tarjeta-producto">
+          <img class="producto" src="/img/chaquetaroja.jpg" alt="chaqueta roja">
+          <h2>Chaqueta Roja</h2>
+          <h3>$35.000</h3>
+          <p>Una chaqueta roja para el invierno.</p>
+      </div>
+      <div class="tarjeta-producto">
+          <img class="producto" src="/img/remeraestampada.jpg" alt="remera estampada">
+          <h2>Remera Estampada</h2>
+          <h3>$5.000</h3>
+          <p>Remera negra con estampa.</p>
+      </div>
+      <div class="tarjeta-producto">
+          <img class="producto" src="/img/jeans.jpg" alt="tarjeta 3">
+          <h2>Jeans clasico</h2>
+          <h3>$25.000</h3>
+          <p>Jeans clasico corte regular.</p>
+      </div>
+      <div class="tarjeta-producto">
+          <img class="producto" src="/img/bermuda.jpg" alt="tarjeta 3">
+          <h2>Bermuda Cargo</h2>
+          <h3>$15.000</h3>
+          <p>Bermuda cargo color gris.</p>
+      </div>
+      <div class="tarjeta-producto">
+          <img class="producto" src="/img/short.jpg" alt="tarjeta 3">
+          <h2>Short de baño</h2>
+          <h3>$11.000</h3>
+          <p>Short de baño.</p>
+      </div>
+      <div class="tarjeta-producto">
+          <img class="producto" src="/img/gorra.jpg" alt="tarjeta 3">
+          <h2>Gorra</h2>
+          <h3>$8.000</h3>
+          <p>Gorra clásica azul.</p>
+      </div>
+      <div class="tarjeta-producto">
+          <img class="producto" src="/img/zapas.jpg" alt="tarjeta 3">
+          <h2>Zapatillas</h2>
+          <h3>$21.000</h3>
+          <p>Zapatillas urbanas.</p>
+      </div>
+      <div class="tarjeta-producto">
+        <img class="producto" src="/img/buzoamarillo.jpg" alt="tarjeta 3">
+        <h2>Buzo amarillo</h2>
+        <h3>$25.000</h3>
+        <p>Buzo canguro amarillo.</p>
+    </div>
+
+      <!-- Agrega más tarjetas aquí -->
+  </section>
+  
+</main>
+
+<footer>
+  <ul class="footer-lista-links-internos">
+    <li class="link-interno"><a href="index.html">HOME</a></li>
+    <li class="link-interno"><a href="contacto.html">CONTACTO</a></li>
+    <li class="link-interno">
+      <a href="sobrenosotros.html">SOBRE NOSOTROS</a>
+    </li>
+  </ul>
+  <ul class="links-externos">
+    <li><i class="fa-brands fa-instagram"></i></li>
+    <li><i class="fa-brands fa-twitter"></i></li>
+  </ul>
+  <p>&copy; 2023 Rocco Clothing. Derechos reservados.</p>
+</footer>
+</body>
+</html>

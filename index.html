@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9009a12189.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Rocco Clothing</title>
+  </head>
+  <body>
+    <header>
+      <div class="contenedor">
+        <a href="index.html"
+          ><img class="logo" src="img/rocco-logo.svg" height="80px" width="80px" alt="rocco-logo"
+        /></a>
+        <input type="checkbox" id="menu-check" />
+          <label id="menu" for="menu-check">
+            <span id="menu-abrir"><i class="fa-solid fa-bars"></i></span>
+            <span id="menu-cerrar"><i class="fa-solid fa-x"></i></span>
+          </label>
+      <nav>
+      <ul class="menu-lista">
+        <li class="menu-item"><a class="no-actual" href="productos.html">PRODUCTOS</a></li>
+        <li class="menu-item"><a class="no-actual" href="contacto.html">CONTACTO</a></li>
+        <li class="menu-item">
+          <a class="no-actual" href="sobrenosotros.html">SOBRE NOSOTROS</a>
+        </li>
+        <li class="menu-item">
+          <button onclick="parent.location='index.html'" class="boton-home">
+            <img style="height: 30px" src="img/home.svg" alt="home" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+        </div>
+  </header>
+
+    <main>
+      <div class="contenedor-imagen-home">
+        <img
+          class="imagen-home-pc"
+          style="width: 100%"
+          style="height: auto"
+          src="img/modelo.png"
+          alt="rocco clothing"
+        />
+        <div class="texto-sobre-imagen">
+          <h1 class="texto-superpuesto" style="text-align: center">
+            NUEVA COLECCIÓN
+          </h1>
+          <button
+            onclick="parent.location='productos.html'"
+            class="boton-ver-mas"
+          >
+            VER MÁS
+          </button>
+        </div>
+        <img
+          class="imagen-home-mobile"
+          style="width: 100%"
+          style="height: auto"
+          src="img/modelo-cropped.png"
+          alt="rocco clothing"
+        />
+      </div>
+      <article class="texto-principal">
+        <h2>ROPA A TU MEDIDA</h2>
+        <p class="texto-principal">
+          Nos encargamos que toda persona pueda disfrutar de la calidad de
+          nuestras prendas, adaptandonos a los últimos estandares de la moda
+          respecto a talles.
+        </p>
+      </article>
+      <section class="grilla">
+        
+          <div class="tarjeta"> 
+           <object
+            class="icono-svg"
+            data="img/camion.svg"
+            type="image/svg+xml"
+          ></object>
+          <div class="texto-icono">
+            <h3>Envíos rápidos a todo el páis</h3>
+          </div>
+        </div>
+
+          <div class="tarjeta">
+            <object
+              class="icono-svg"
+              data="img/tarjeta.svg"
+              type="image/svg+xml"
+            ></object>
+            <div class="texto-icono">
+              <h3>Aceptamos todos los métodos de pago</h3>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <object
+              class="icono-svg"
+              data="img/reciclaje.svg"
+              type="image/svg+xml"
+            ></object>
+            <div class="texto-icono">
+              <h3>Nuestro proceso de fabricación respeta el medioambiente</h3>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <object
+              class="icono-svg"
+              data="img/calendario.svg"
+              type="image/svg+xml"
+            ></object>
+            <div class="texto-icono">
+              <h3>Atención los 365 días del año</h3>
+            </div>
+          </div>
+          <div class="tarjeta">
+            <object
+              class="icono-svg"
+              data="img/remera.svg"
+              type="image/svg+xml"
+            ></object>
+            <div class="texto-icono">
+              <h3>Prendas de la mejor calidad del mercado</h3>
+            </div>
+          </div>
+          <div class="tarjeta">
+            <object class="icono-svg" data="img/globo.svg" type=""></object>
+            <div class="texto-icono">
+              <h3>Envios globales a través de courier</h3>
+            </div>
+          </div>
+        
+      </section>
+    </main>
+
+    <footer>
+      <ul class="footer-lista-links-internos">
+        <li class="link-interno"><a href="index.html">HOME</a></li>
+        <li class="link-interno"><a href="contacto.html">CONTACTO</a></li>
+        <li class="link-interno">
+          <a href="sobrenosotros.html">SOBRE NOSOTROS</a>
+        </li>
+      </ul>
+      <ul class="links-externos">
+        <li><i class="fa-brands fa-instagram"></i></li>
+        <li><i class="fa-brands fa-twitter"></i></li>
+      </ul>
+      <p>&copy; 2023 Rocco Clothing. Derechos reservados.</p>
+    </footer>
+  </body>
+</html>
