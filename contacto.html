@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/9009a12189.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/validacion.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -80,21 +81,25 @@
             
         </div>
 
-      <form action="">
+      <form action="https://formspree.io/f/mgejdrez"
+      method="POST"
+      onsubmit="return validar();">
           <fieldset>
               <legend>Datos Personales</legend>
                   
                       <label for="nombre"></label>
                       <input  type="text" placeholder="Nombre" id="nombre" name="nombre" size="50">    
-  
+                      <span id="validar_nombre" style="color: mediumpurple;"></span>
+
                       <label for="apellido"></label>
                       <input type="text" name="apellido" id="apellido" placeholder="Apellido" size="50">
-                  
+                      <span id="validar_apellido" style="color:mediumpurple;"></span>
   
                   
                       <label for="email"></label>
                       <input type="text" name="email" id="email" placeholder="Email" size="50">
-  
+                      <span id="validar_email" style="color: mediumpurple;"></span>
+
                       <label for="telefono"></label>
                       <input type="text" name="telefono" id="telefono" placeholder="Teléfono" size="50">
                   
@@ -113,6 +118,7 @@
 
                   <textarea placeholder="Mensaje" name="mensaje" id="mensaje" cols="100" rows="10">
                   </textarea>
+                  <span id="validar_mensaje" style="color: aquamarine;"></span>
               
 
           </fieldset>
