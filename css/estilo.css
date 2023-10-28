@@ -226,7 +226,7 @@ section, article{
   font-size: 1.5em;
   font-weight: 400;
   text-align: left;
-  line-height: 10px;
+  line-height: 20px;
 }
 
 .tarjeta-producto h3{
@@ -766,6 +766,11 @@ li {
 
   }
 
+  .tarjeta-producto{
+    grid-column-end: span 6;
+  }
+
+
   #menu-check:not(:checked) ~ nav {
     display: none;
   }
@@ -823,9 +828,6 @@ li {
     grid-column-end: span 6;
   }
 
-  .tarjeta-producto{
-    grid-column-end: span 6;
-  }
 
   
 
