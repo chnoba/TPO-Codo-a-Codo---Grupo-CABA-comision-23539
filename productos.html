@@ -23,6 +23,9 @@
       <a href="index.html"
         ><img class="logo" src="img/rocco-logo.svg" height="80px" width="80px" alt="rocco-logo"
       /></a>
+      <a href="index.html"
+        ><img class="imagotipo" src="img/imagotipo.svg" height="80px" width="160px" alt="rocco-logo"
+      /></a>
       <input type="checkbox" id="menu-check" />
         <label id="menu" for="menu-check">
           <span id="menu-abrir"><i class="fa-solid fa-bars"></i></span>
@@ -30,14 +33,14 @@
         </label>
     <nav>
     <ul class="menu-lista">
-      <li class="menu-item"><a id="actual" href="productos.html">PRODUCTOS</a></li>
+      <li class="menu-item"><a class="no-actual" href="productos.html">PRODUCTOS</a></li>
       <li class="menu-item"><a class="no-actual" href="contacto.html">CONTACTO</a></li>
       <li class="menu-item">
         <a class="no-actual" href="sobrenosotros.html">SOBRE NOSOTROS</a>
       </li>
       <li class="menu-item">
         <button onclick="parent.location='index.html'" class="boton-home">
-          <img style="height: 30px" src="img/home.svg" alt="home" />
+          <img id="icono-casa" style="height: 30px" src="img/home.svg" alt="home" />
         </button>
       </li>
     </ul>
@@ -125,8 +128,8 @@
     </li>
   </ul>
   <ul class="links-externos">
-    <li><i class="fa-brands fa-instagram"></i></li>
-    <li><i class="fa-brands fa-twitter"></i></li>
+    <li><a target="_blank" href="http://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a target="_blank" href="http://www.twitter.com"><i class="fa-brands fa-twitter"></a></i></li>
   </ul>
   <p>&copy; 2023 Rocco Clothing. Derechos reservados.</p>
 </footer>

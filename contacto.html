@@ -24,6 +24,9 @@
       <a href="index.html"
         ><img class="logo" src="img/rocco-logo.svg" height="80px" width="80px" alt="rocco-logo"
       /></a>
+      <a href="index.html"
+        ><img class="imagotipo" src="img/imagotipo.svg" height="80px" width="160px" alt="rocco-logo"
+      /></a>
       <input type="checkbox" id="menu-check" />
         <label id="menu" for="menu-check">
           <span id="menu-abrir"><i class="fa-solid fa-bars"></i></span>
@@ -32,13 +35,13 @@
     <nav>
     <ul class="menu-lista">
       <li class="menu-item"><a class="no-actual" href="productos.html">PRODUCTOS</a></li>
-      <li class="menu-item"><a id="actual" href="contacto.html">CONTACTO</a></li>
+      <li class="menu-item"><a class="no-actual" href="contacto.html">CONTACTO</a></li>
       <li class="menu-item">
         <a class="no-actual" href="sobrenosotros.html">SOBRE NOSOTROS</a>
       </li>
       <li class="menu-item">
         <button onclick="parent.location='index.html'" class="boton-home">
-          <img style="height: 30px" src="img/home.svg" alt="home" />
+          <img id="icono-casa" style="height: 30px" src="img/home.svg" alt="home" />
         </button>
       </li>
     </ul>
@@ -61,7 +64,7 @@
   <section class="formulario">
       
       <p>Si necesitas una respuesta inmediata. Envíanos tu duda o sugerencia a continuación:</p>
-      <div class="grilla">
+      <div class="grilla" id="grilla-form">
         <div class="form-imagen">
           <div class="info-contenedor">
             <div class="info">
@@ -70,7 +73,7 @@
 
           <div class="info-contenedor">
             <div class="info">
-          <div class="icono-contacto"><i class="fa-solid fa-phone"></i></div><div class="texto-contacto"><p><b>Telefono:</b> +54 9 11 xxxxxxx</p></div></div>
+          <div class="icono-contacto"><i class="fa-solid fa-phone"></i></div><div class="texto-contacto"><p><b>Telefono:</b> +54 9 11 12345678</p></div></div>
         </div>
 
           <div class="info-contenedor">
@@ -116,9 +119,8 @@
                       <input type="text" placeholder="Dirección" name="direccion" id="direccion" size="50">
                 
 
-                  <textarea placeholder="Mensaje" name="mensaje" id="mensaje" cols="100" rows="10">
-                  </textarea>
-                  <span id="validar_mensaje" style="color: aquamarine;"></span>
+                  <textarea placeholder="Mensaje" name="mensaje" id="mensaje" cols="100" rows="10"></textarea>
+                  <span id="validar_mensaje" style="color: mediumpurple;"></span>
               
 
           </fieldset>
@@ -141,8 +143,8 @@
     </li>
   </ul>
   <ul class="links-externos">
-    <li><i class="fa-brands fa-instagram"></i></li>
-    <li><i class="fa-brands fa-twitter"></i></li>
+    <li><a target="_blank" href="http://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a target="_blank" href="http://www.twitter.com"><i class="fa-brands fa-twitter"></a></i></li>
   </ul>
   <p>&copy; 2023 Rocco Clothing. Derechos reservados.</p>
 </footer>
