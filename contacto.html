@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/validacion.js"></script>
-    <title>Contacto</title>
+    <title>Document</title>
 </head>
 <body>
   <header>
@@ -35,7 +35,7 @@
     <nav>
     <ul class="menu-lista">
       <li class="menu-item"><a class="no-actual" href="productos.html">PRODUCTOS</a></li>
-      <li class="menu-item"><a class="no-actual" href="contacto.html">CONTACTO</a></li>
+      <li class="menu-item" id="actual"><a class="no-actual" href="contacto.html">CONTACTO</a></li>
       <li class="menu-item">
         <a class="no-actual" href="sobrenosotros.html">SOBRE NOSOTROS</a>
       </li>
@@ -109,8 +109,9 @@
                   
                      <label for="pais"></label>
                      <select onclick="cambiarBlanco()" class="selector" name="listaPaises" id="listaPaises">
-                      <option selected="true" disabled="disabled">País</option>
+                      <option value="pais" selected="true" disabled="disabled">País</option>
                      </select>
+                     <span id="validar_pais" style="color: mediumpurple;"></span>
   
                       <label for="ciudad"></label>
                       <input type="text" placeholder="Ciudad" name="ciudad" id="ciudad" size="50">

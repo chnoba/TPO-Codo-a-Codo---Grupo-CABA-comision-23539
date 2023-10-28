@@ -4,12 +4,15 @@ function validar()
     let apellido = document.getElementById("apellido");
     let email = document.getElementById("email");
     let mensaje = document.getElementById("mensaje");
+    let listaPaises= document.getElementById("listaPaises")
+    var seleccionado = listaPaises.options[listaPaises.selectedIndex].value;
     let error = false;
     
     document.getElementById("validar_nombre").innerHTML="";
     document.getElementById("validar_apellido").innerHTML="";
     document.getElementById("validar_email").innerHTML="";
     document.getElementById("validar_mensaje").innerHTML="";
+    document.getElementById("validar_pais").innerHTML="";
 
     if(nombre.value == ""){
         document.getElementById("validar_nombre").innerHTML="Debe completar el campo Nombre";
@@ -35,6 +38,12 @@ function validar()
         mensaje.focus();
     }
 
+    if(seleccionado == "pais"){
+        document.getElementById("validar_pais").innerHTML="Debe seleccionar un país";
+        error = true;
+    }
+
+
     if(error == false){
         document.getElementById("nombre").value="";
         document.getElementById("validar_nombre").innerHTML="";
@@ -47,6 +56,8 @@ function validar()
 
         document.getElementById("mensaje").value="";
         document.getElementById("validar_mensaje").innerHTML="";
+        
+        document.getElementById("validar_pais").innerHTML=""
 
         alert("Datos enviados");
     }
