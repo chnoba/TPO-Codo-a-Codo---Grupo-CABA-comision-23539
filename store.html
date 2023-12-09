@@ -52,7 +52,6 @@
   <article>
   <h2 class="titulo">Productos</h2>
   </article>
-  <section class="grilla">
     <section class="grilla" id="app">
       <div class="tarjeta-producto" v-for="producto in productos" :key="producto.id">
         <img crossorigin="" class="producto" :src="producto.imagen" :alt="producto.nombre">
@@ -60,7 +59,6 @@
         <h3>{{ `$${producto.precio}` }}</h3>
         <p>{{ producto.descripcion }}</p>
       </div>
-    </section>
   </section>
   
 </main>
