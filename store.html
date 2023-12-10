@@ -123,10 +123,12 @@
   <section class="grilla" id="app">
       <div class="tarjeta-producto" v-for="producto in productos" :key="producto.id">
         <!-- :src="producto.imagen" -->
-        <img crossorigin="" class="producto" :src="producto.imagen" :alt="producto.nombre">  
+        <img crossorigin="" class="producto" :src="producto.imagen" :alt="producto.nombre">
+        <div class="datos-producto">
         <h2>{{ producto.nombre }}</h2>
         <h3>{{ `$${producto.precio.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}}</h3>
-        <button class="boton-carrito" onclick="addToCart()">AGREGAR AL CARRITO</button> 
+        <button class="boton-carrito" onclick="addToCart()">AGREGAR AL CARRITO</button>
+        </div>
         <!-- <p>{{ producto.descripcion }}</p> -->
       </div>
   </section>
