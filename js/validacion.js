@@ -64,3 +64,25 @@ function validar()
 
     return !error;
 }
+
+function validarCredenciales() {
+    // Obtener los valores de usuario y contraseña
+    var usuario = document.getElementById('validationDefault01').value;
+    var password = document.getElementById('validationCustom04').value;
+    
+    if(usuario ==='' || password === ''){
+        return;
+    }
+
+    // Verificar las credenciales
+    if (usuario === 'admin' && password === 'admin') {
+      // Credenciales correctas, redirigir a productos.html
+      window.location.href = 'productos.html';
+    } else {
+      // Credenciales incorrectas, puedes mostrar un mensaje de error si lo deseas
+      alert('Credenciales incorrectas. Por favor, inténtelo de nuevo.');
+    }
+    
+    // Evitar que el formulario se envíe automáticamente
+    event.preventDefault();
+  }
