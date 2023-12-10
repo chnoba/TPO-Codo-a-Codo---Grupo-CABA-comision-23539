@@ -20,7 +20,7 @@ Atender a las necesidades de nuestros clientes. Ofrecer la mejor indumentaria.
 ## Diseño y Estilo
 
 - Estilo Visual: Elegante, profesional, moderno y tecnológico.
-- Colores: Blanco, negro y tonos gris, y violeta.
+- Colores: Blanco, negro y tonos gris.
   
 ## Tipografía
 
