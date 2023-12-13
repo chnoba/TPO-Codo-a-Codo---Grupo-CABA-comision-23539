@@ -13,6 +13,13 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200&family=Dosis:wght@200;300;400&family=Quicksand:wght@300&family=Roboto:wght@300&family=Rubik:wght@300&display=swap"
+    rel="stylesheet">
+    <link rel="shortcut icon" href="img/favico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilo.css">
   </head>
   <body>
     <header id="header">
@@ -22,7 +29,7 @@
       <div id="app" class="container">
         <h1>Productos</h1>
         <br />
-        <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+        <a class="btn btn-success" href="producto_nuevo.html"><div class="boton-crud"><img src="img/plus-circle.svg" style="width: 100%; height: 20px;" alt="nuevo"><h6 style="margin-bottom: 0;">Nuevo</h6></div></a>
         <br /><br />
         <div v-if="error">
           <p>Lo sentimos , ........</p>
@@ -54,7 +61,7 @@
                     <td>{{producto.stock}}</td>
                     <td>
                       <img crossorigin=""
-              
+                        class="imagen-crud"
                         width="60"
                         :src="producto.imagen"
                         :alt="producto.nombre"
@@ -62,17 +69,22 @@
                     </td>
                     <td>{{producto.descripcion}}</td>
                     <td>
+                      
                       <a
-                        class="btn btn-primary"
+                        class="btn btn-primary" style="margin-right: 30px;"
                         :href="'producto_update.html?id='+ producto.id"
-                        >Editar</a
+                        ><div class="boton-crud"><img style="width: 100%; height: 20px;" src="img/file-edit-outline.svg" alt="editar"><h6 style="margin-bottom: 0;">Editar</h6></div></a
                       >
+
                       <button
                         type="button"
                         class="btn btn-danger"
                         v-on:click="eliminar(producto.id)"
                       >
-                        Eliminar
+                      <div class="boton-crud">
+                        <img src="img/trash-bold.svg" style="width: 100%; height: 20px;" alt="eliminar">
+                        <h6 style="margin-bottom: 0;">Eliminar</h6>
+                      </div>
                       </button>
                     </td>
                   </tr>
