@@ -97,7 +97,7 @@ main {
 
 #servicios, #contacto, #formulario{
   margin: 3em;
-  gap: 3em;
+  gap: 3em 0;
 } 
 
 .contenedor-imagen-home {
@@ -157,9 +157,11 @@ main {
 .datos-producto{
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 0;
   align-items: center;
 }
+
+
 
 @keyframes revelar {
   0% {
@@ -354,6 +356,7 @@ main {
   background-color: white;
   padding: 15% 0 15%;
   grid-column-end:span 2;
+  border:0.5px solid #bfbfbf
 }
 
 .grilla {
@@ -818,6 +821,29 @@ form span {
   margin-right: 5px;
 }
 
+.link-a{
+  position: relative;
+}
+
+
+.link-a::before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+.link-a:hover::before {
+  transform: scaleX(1);
+}
+
 
 .grilla form{
   grid-column-end: 10;
@@ -905,7 +931,11 @@ footer {
   display: block;
   height: 140px;
   background-color: #303234;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
   padding: 1px;
   position: relative;
   height: fit-content;
@@ -942,10 +972,7 @@ footer ul {
   color: white;
 }
 
-.footer-lista-links-internos a:hover {
-  color:lightgray;
-  transition: 0.3s;
-}
+
 
 /* iconos redes sociales*/
 
@@ -969,11 +996,353 @@ li {
   list-style-type: none;
 }
 
+.nav-link:hover{
+  color: #333;
+}
+
+#app{
+  margin-bottom: 3rem;
+}
+
+.navbar{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.modal-title{
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: 2.5em;
+}
+
+.link-int{
+  position: relative;
+}
+
+.link-int::before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: -3px;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+.link-int:hover:before{
+  transform: scaleX(1);
+}
+
+
+.offcanvas-end{
+  width: 650px;
+}
+
+h5{
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size:2.5em;
+  color: #333;
+}
+
+.producto-carrito h6{
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+}
+
+.opciones-carrito{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.datos-carrito p{
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  color:#333
+}
+
+.boton-eliminar{
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  text-decoration: underline;
+  font-size: 20px;
+  color: dimgrey;
+}
+
+.sumador{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #bfbfbf;
+  justify-content: center;
+  gap: 5px;
+  width:fit-content;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.producto-carrito .cantidad{
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 0;
+  width: 30px;
+  text-align: center;
+}
+
+.boton-sumador{
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  padding: 5px 15px;
+  font-size: 20px;
+  
+}
+
+.linea-gris{
+  border-top: 1px solid #bfbfbf;
+}
+
+.boton-checkout{
+  
+  appearance: none;
+  backface-visibility: hidden;
+  background-color:#333;
+  border-radius: 0px;
+  border-style: none;
+  box-shadow: none;
+  box-sizing:content-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: normal;
+  outline: none;
+  overflow: hidden;
+  padding: 5px 120px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.boton-checkout:hover {
+  background-color: dimgray;
+  box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.boton-checkout:hover:after {
+  opacity: .5;
+}
+
+.boton-checkout:active {
+  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+.boton-carrito:active:after {
+  opacity: 1;
+}
+
+
+.producto-carrito h6{
+  font-size: 20px;
+}
+
+.producto-carrito h6::first-letter{
+  text-transform: uppercase;
+}
+
+.producto-carrito{
+  border-top: 1px solid #bfbfbf;
+  margin: 0 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-self:flex-start;
+  margin: 20px 0 0 0;
+  padding: 20px 0 20px 0;
+  text-align: left;
+  gap: 25px;
+}
+
+#cuerpo-canvas{
+  margin-bottom:180px;
+}
+
+#cart-check{
+  filter: invert(31%) sepia(76%) saturate(2169%) hue-rotate(141deg) brightness(96%) contrast(101%);
+  width: auto;
+  height: 20px;
+}
+
+.tostada{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 10px;
+}
+
+#agregado-correctamente{
+  margin-bottom: 0;
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.texto-total{
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  width: 564.5px;
+  margin-top: 30px;
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+.texto-total div:last-child{
+  margin-left: auto;
+}
+
+
+
+.total{
+  position: absolute;
+  bottom: 0;
+  background-color:#f7f7f7;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto-carrito img{
+  height: auto;
+  max-width: 100%
+}
+
+.imagen-carrito{
+  width: 25%;
+}
+
+.producto-carrito h3{
+  text-transform: capitalize;
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  color:#303234;
+  font-weight: 600;
+}
+
+#carrito-vacio{
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+}
+
+#liveToastBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#agregar-text{
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.price{
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.description{
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                  EMPIEZAN LOS MEDIA QUERY!! 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-
+@media (min-width: 1025px) {
+  .h-custom {
+  height: 100vh !important;
+  }
+  }
 
 @media only screen and (max-width: 1500px){
   .personas .grilla{
@@ -1145,6 +1514,21 @@ li {
     white-space: normal;
   }
   
+  @media only screen and (max-width: 550px){
+    .subtexto-superpuesto{
+      font-size: 1em;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
 
+    .contenedor-imagen-home{
+      padding-top: 5rem;
+    }
+
+    .texto-superpuesto{
+      font-size: 2em;
+    }
+
+  }
   
 }
