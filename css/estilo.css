@@ -259,6 +259,7 @@ main {
   grid-column-end:span 3;
   border: 0.5px solid #bfbfbf;
   padding-bottom: 2.5em;
+  max-height: 725.5px
 }
 
 
