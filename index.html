@@ -199,7 +199,7 @@
                       <p> {{ `$${getProductPrice(productId).toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}}</p>
                       <div class="opciones-carrito">
                       <div class="sumador"><button class="boton-sumador" @click="restarDelCarrito(productId)" onclick="escribirProductosCarrito()">-</button><h2 class="cantidad">{{ cantidad }}</h2>
-                      <button class="boton-sumador" @click="sumarAlCarrito(productId)" v-bind:style="{ 'pointer-events': cantidad === getProductStock(productId) ? 'none' : 'auto', 'color': cantidad === getProductStock(productId) ? '#939393' : '#212529' }" onclick="escribirProductosCarrito()">+</button></div>
+                      <button class="boton-sumador" @click="sumarAlCarrito(productId)" onclick="escribirProductosCarrito()">+</button></div>
                       <!-- Botón para eliminar -->
                       <button class="boton-eliminar" @click="eliminarDelCarrito(productId)" onclick="escribirProductosCarrito()">Eliminar</button>
                     </div>

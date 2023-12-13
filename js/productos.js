@@ -69,15 +69,22 @@ createApp({
     },
     agregarAlCarrito(producto){
       try {
-        // Verifica si el producto ya está en el carrito
         if (this.carrito.hasOwnProperty(producto.id)) {
-          // Si existe, incrementa la cantidad en 1
-          this.carrito[producto.id]++;
+          // Si existe, verifica si la cantidad es menor al stock antes de incrementar
+          if (this.carrito[producto.id] < producto.stock) {
+            this.carrito[producto.id]++;
+            this.showToast();
+          } else {
+            // Aquí puedes manejar la lógica si la cantidad alcanza el stock máximo
+            console.warn("Stock máximo alcanzado para este producto.");
+            this.toastError();
+          }
         } else {
           // Si no existe, inicializa la cantidad en 1
           this.carrito[producto.id] = 1;
+          this.showToast();
         }
-        this.showToast();
+        
         this.actualizarCarritoVacio();
         this.guardarCarritoEnLocalStorage();
         // Refresca la interfaz de usuario
@@ -220,12 +227,42 @@ createApp({
           autohide: true,
           delay: 1000,
         });
-
+        
+        toastLiveExample.querySelector('.toast-body').innerHTML = `<div class="tostada"><img id="cart-check" src="img/cart-check.svg" alt="carrito de compra"><p id="agregado-correctamente">Agregado al carrito correctamente.</p></div>`;
+       
+        const toastHeaderElement = toastLiveExample.querySelector('.toast-header');
+        if (toastHeaderElement) {
+          toastHeaderElement.style.backgroundColor = '#009E60'; // Reemplaza con el color que desees
+        }
         // Muestra el Toast
         toast.show();
       }
     })
-    },   
+    },
+    
+    toastError() {
+      this.$nextTick(() => {
+        const toastLiveExample = document.getElementById('liveToast');
+    
+        if (toastLiveExample) {
+          // Crea una instancia de Toast de Bootstrap
+          const toast = new bootstrap.Toast(toastLiveExample, {
+            animation: true,
+            autohide: true,
+            delay: 1000,
+          });
+          const toastHeaderElement = toastLiveExample.querySelector('.toast-header');
+          if (toastHeaderElement) {
+            toastHeaderElement.style.backgroundColor = '#ff3232'; // Reemplaza con el color que desees
+          } 
+          // Cambia el mensaje del Toast según la condición
+          toastLiveExample.querySelector('.toast-body').innerHTML =  `<div class="tostada"><img style="height:18px;" src="img/emblem-error.svg" alt="carrito de compra"><p id="agregado-correctamente">No hay más stock del producto.</p></div>`;
+    
+          // Muestra el Toast
+          toast.show();
+        }
+      });
+    }
   },
 
   created() {
