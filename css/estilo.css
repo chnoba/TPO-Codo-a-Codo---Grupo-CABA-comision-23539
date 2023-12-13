@@ -680,9 +680,9 @@ h4 {
 }
 
 
-img{
+/* img{
   width: 100%;
-}
+} */
 
 .form-imagen{
   grid-column-start: 4;
@@ -1129,6 +1129,59 @@ h5{
 .linea-gris{
   margin-top: 20px;
   border-top: 1px solid #bfbfbf;
+}
+
+
+
+/* OCULTAR APARIENCIA DEL INCREMENTADOR EN EL INPUT NUMBER */
+
+/* input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+} */
+
+.imagen.crud{
+  width: 60px;
+}
+
+.boton-crud{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+.label-crud{
+  color: #333;
+}
+
+.input-crud{
+  color: #333;
+}
+
+.boton-crud img{
+  filter: invert(100%) sepia(0%) saturate(677%) hue-rotate(141deg) brightness(115%) contrast(100%);
+}
+
+.navbar-brand{
+  font-weight: 600;
+}
+
+.table-responsive{
+  font-family: 'Azeret Mono', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .boton-checkout{
