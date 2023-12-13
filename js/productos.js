@@ -114,6 +114,7 @@ createApp({
             // Si la cantidad es 1 o menos, elimina el producto del carrito
             delete this.carrito[productId];
           }
+          localStorage.setItem('totalProductos',localStorage.getItem('totalProductos')-1);
           this.actualizarCarritoVacio();
           this.guardarCarritoEnLocalStorage();
           // Refresca la interfaz de usuario
@@ -127,6 +128,7 @@ createApp({
     eliminarDelCarrito(productId) {
       try {
         if (this.carrito.hasOwnProperty(productId)) {
+          localStorage.setItem('totalProductos',localStorage.getItem('totalProductos')- this.carrito[productId]);
           delete this.carrito[productId];
           this.actualizarCarritoVacio();
           this.guardarCarritoEnLocalStorage();
@@ -141,14 +143,23 @@ createApp({
     getTotal() {
       try {
         let total = 0;
-  
+        let productosTotales =0;
+
+        if (Object.keys(this.carrito).length === 0) {
+          // Si el carrito está vacío, establece productosTotales en 0 y devuelve 0
+          productosTotales = 0;
+          localStorage.setItem('totalProductos', productosTotales);
+          return 0;
+        }
+
         for (const [productId, cantidad] of Object.entries(this.carrito)) {
           const product = this.productos.find(producto => producto.id === parseInt(productId));
           if (product) {
             total += product.precio * cantidad;
+            productosTotales += cantidad;
           }
         }
-  
+        localStorage.setItem('totalProductos',productosTotales);
         return total; // Ajusta la cantidad de decimales según tu preferencia
       } catch (error) {
         console.error("Error al calcular el total del carrito:", error);
@@ -216,7 +227,8 @@ createApp({
   created() {
     this.fetchData(this.url);
     this.recuperarCarritoDesdeLocalStorage();
-    this.carritoVacio = JSON.parse(localStorage.getItem('carritoVacio')) ?? true; 
+    this.carritoVacio = JSON.parse(localStorage.getItem('carritoVacio')) ?? true;
+    
   },
 }).mount("#app");
 

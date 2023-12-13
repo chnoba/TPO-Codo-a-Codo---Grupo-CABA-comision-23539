@@ -53,9 +53,12 @@
             <li class="nav-derecha" class="nav-item">
               <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Carrito" >
                 <button class="boton-home" type="button" data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasRightWithBothOptions" aria-controls="offcanvasRightWithBothOptions">
-                  <img style="height: 30px" src="img/shopping-cart-light.svg" alt="carrito" />
-                </button>
+                data-bs-target="#offcanvasRightWithBothOptions" aria-controls="offcanvasRightWithBothOptions">
+                <img style="height: 30px" src="img/shopping-cart-light.svg" alt="carrito" /><span id="productosCarrito" class="position-absolute top-20 start-10 translate-middle badge rounded-pill bg-dark" style="display: none;">
+                
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
               </span>
             </li>
           </ul>
@@ -195,10 +198,10 @@
                       <h6> {{ getProductDescription(productId) }}</h6>
                       <p> {{ `$${getProductPrice(productId).toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}}</p>
                       <div class="opciones-carrito">
-                      <div class="sumador"><button class="boton-sumador" @click="restarDelCarrito(productId)">-</button><h2 class="cantidad">{{ cantidad }}</h2>
-                      <button class="boton-sumador" @click="sumarAlCarrito(productId)">+</button></div>
+                      <div class="sumador"><button class="boton-sumador" @click="restarDelCarrito(productId)" onclick="escribirProductosCarrito()">-</button><h2 class="cantidad">{{ cantidad }}</h2>
+                      <button class="boton-sumador" @click="sumarAlCarrito(productId)" onclick="escribirProductosCarrito()">+</button></div>
                       <!-- Botón para eliminar -->
-                      <button class="boton-eliminar" @click="eliminarDelCarrito(productId)">Eliminar</button>
+                      <button class="boton-eliminar" @click="eliminarDelCarrito(productId)" onclick="escribirProductosCarrito()">Eliminar</button>
                     </div>
                     </div>
                   </div>     
@@ -277,7 +280,21 @@
       </ul>
       <p>&copy; 2023 Rocco Clothing. Derechos reservados.</p>
     </footer>
-
+    <script>
+      var escribirProductosCarrito = function(){
+        if (localStorage.getItem('carritoVacio') == 'false'){
+          document.getElementById("productosCarrito").style.display = "";
+        } else{
+          document.getElementById("productosCarrito").style.display = "none";
+        }
+        document.getElementById("productosCarrito").innerHTML = localStorage.getItem('totalProductos');
+        }
+       
+        window.onload = function(){
+          setTimeout(escribirProductosCarrito,300)
+        }
+     
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
