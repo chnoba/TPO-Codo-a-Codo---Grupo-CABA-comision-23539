@@ -103,6 +103,10 @@ createApp({
       const product = this.productos.find(producto => producto.id === parseInt(productId));
       return product ? product.descripcion : '';
     },
+    getProductStock(productId) {
+      const product = this.productos.find(producto => producto.id === parseInt(productId));
+      return product ? product.stock : '';
+    },
   
     restarDelCarrito(productId) {
       try {
